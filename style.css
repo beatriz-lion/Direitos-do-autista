@@ -1,0 +1,559 @@
+/* Estilos gerais para o corpo da página */
+body.menu-body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; <-- Removido */
+    margin: 0;
+    padding: 20px;
+
+    /* === IMAGEM DE FUNDO DO MENU ADICIONADA === */
+    background-image: url('imagens/laco-autismo.png');
+    /* Assumindo .png */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estiliza o cabeçalho (com tema de "Super Poderes") */
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+    /* A cor será definida no h1 e p abaixo */
+}
+
+/* Estilo do Título Principal (H1) */
+.menu-header h1 {
+    font-size: 4em;
+    /* Texto bem grande (ex: 48px) */
+    font-weight: 900;
+    /* O mais forte e "gordo" possível */
+
+    /* Cor: Azul! */
+    color: #0f0d9c;
+
+    /* Sombra estilo "Super Herói" (contorno + sombra) */
+    text-shadow:
+        /* Contorno branco (combina com o tema) */
+        -2px -2px 0 #cbd81b,
+        2px -2px 0 #ffffff,
+        -2px 2px 0 #ffffff,
+        2px 2px 0 #ffffff,
+
+        /* Sombra escura por baixo */
+        4px 4px 5px rgb(244, 248, 8);
+
+    margin: 50px;
+}
+
+/* Estilo do Subtítulo (P) */
+.menu-header p {
+    font-size: 1.4em;
+    /* Um pouco maior que antes */
+    font-weight: bold;
+    color: #000000;
+    /* Texto preto */
+
+    /* Sombra preta forte para se destacar do fundo */
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+
+    margin-top: 10px;
+}
+
+/* === A MÁGICA ACONTECE AQUI === */
+
+/* 1. Cria a grade do menu */
+.menu-grid {
+    display: grid;
+    /* - Tenta criar colunas de no mínimo 150px.
+      - 'auto-fit' faz com que elas se ajustem e preencham o espaço.
+      - '1fr' distribui o espaço igualmente.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    /* Espaço entre os itens do menu */
+    max-width: 900px;
+    /* Limita a largura total do menu */
+
+    /* === MUDANÇA AQUI === */
+    /* Isso adiciona um espaço no topo (10% da altura da tela)
+       e mantém a centralização horizontal ('auto') */
+    margin: 14vh auto;
+}
+
+/* 2. Estiliza cada item do menu */
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 3px solid #003366;
+
+    /* Para centralizar o conteúdo (imagem e texto) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    color: #444;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: transform 0.2s;
+    /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse por cima */
+.menu-item:hover {
+    transform: translateY(-5px);
+    /* Levanta o card levemente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 3. A SOLUÇÃO PARA IMAGEM DENTRO DOS BOTÕES INICIAIS */
+.menu-item img {
+    /* Define um tamanho máximo para a imagem */
+    max-width: 150px;
+
+    /* Define uma largura de 100% (do 'max-width') 
+      e altura automática para manter a proporção.
+    */
+    width: 150%;
+    height: auto;
+
+    margin-bottom: 16px;
+    /* Espaço entre a imagem e o texto */
+}
+
+/* Garante que o texto fique abaixo da imagem */
+.menu-item span {
+    display: block;
+    /* <-- Ponto e vírgula adicionado AQUI */
+    text-align: center;
+    /* <-- Ponto e vírgula adicionado AQUI */
+
+    /* === ESTILO SUPER PODERES APLICADO === */
+
+    /* 1. A cor azul-escura (do contorno do seu título) */
+    color: #003366;
+    /* <-- Ponto e vírgula adicionado AQUI */
+
+    /* 2. Deixa o texto "super" forte, como o título */
+    font-weight: 900;
+    /* <-- Ponto e vírgula adicionado AQUI */
+
+    /* 3. Aumenta um pouco o tamanho */
+    font-size: 1.2em;
+    /* <-- Ponto e vírgula adicionado AQUI */
+
+    /* 4. Sombra sutil para destacar */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================================
+  ESTILOS PARA A CENA INTERATIVA (Escola)
+==================================================
+*/
+
+/* 1. Define a imagem de fundo da escola. */
+#cena-sala-de-aula {
+    position: relative;
+    /* Essencial para posicionar os hotspots */
+    width: 100%;
+    max-width: 1000px;
+    /* Largura máxima da sua imagem */
+    height: 900px;
+    /* Altura da sua imagem - AJUSTE ESTE VALOR */
+
+    background-image: url('imagens/sala-de-aula.png');    /* <<< SUA IMAGEM AQUI */
+    background-size: 100% 100%;
+    /* Cobre toda a área */
+    background-position: center;
+    /* Centraliza a imagem */
+
+    border-radius: 10px;
+    margin: 20px auto;
+    /* Centraliza a cena na página */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 2. ESTILO ATUALIZADO DO HOTSPOT (LARANJA COM '+') */
+.hotspot-icone {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 165, 0, 0.8);
+    /* Laranja (orange) */
+    border: 2px solid white;
+    border-radius: 50%;
+    /* Círculo */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.2s;
+    /* Transição suave para tudo */
+
+    /* Posição relativa para ancorar o "+" */
+    position: relative;
+}
+
+/* Cria o "+" usando um pseudo-elemento (CSS) */
+.hotspot-icone::before {
+    content: '+';
+
+    /* Estiliza o "+" */
+    color: white;
+    font-size: 24px;
+    /* Tamanho do "+" */
+    font-weight: bold;
+
+    /* Centraliza o "+" perfeitamente no meio do círculo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* <-- CORRIGIDO AQUI (removido o 't_') */
+    line-height: 1;
+    /* Ajuste fino para centralização vertical */
+}
+
+/* Efeito ao passar o mouse */
+.hotspot-icone:hover {
+    transform: scale(1.2);
+    /* Aumenta o tamanho */
+    background-color: rgba(255, 165, 0, 1);
+    /* Laranja sólido */
+}
+
+
+/* 3. Posicionamento dos hotspots (AJUSTE OS VALORES 'top' e 'left') */
+.hotspot {
+    position: absolute;
+    /* Permite posicionar em qualquer lugar da cena */
+}
+
+/* Posição do Hotspot do Aluno */
+#hotspot-aluno {
+    top: 60%;
+    /* 60% do topo */
+    left: 30%;
+    /* 30% da esquerda */
+}
+
+/* Posição do Hotspot da Mesa da Professora */
+#hotspot-mesa-professor {
+    top: 45%;
+    left: 70%;
+}
+
+
+/* 4. Estilo da caixa de informação (que aparece ao clicar) */
+.info-box {
+    display: none;
+    /* Começa escondida */
+    position: absolute;
+    bottom: 40px;
+    /* Aparece um pouco acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza a caixa */
+
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    /* Garante que fique na frente */
+}
+
+.info-box strong {
+    color: #d9534f;
+    /* Um tom de vermelho */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* 5. CORREÇÃO JS: Mostra a info-box quando ela tem a classe 'visivel' */
+.info-box.visivel {
+    display: block;
+}
+
+
+/* 6. Posição do botão voltar (agora dentro da cena) */
+#botao-voltar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    z-index: 5;
+    transition: background-color 0.2s;
+}
+
+#botao-voltar:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ==================================================
+  ESTILOS PARA A CENA INTERATIVA (Cinema)
+==================================================
+*/
+
+/* 1. Define a imagem de fundo do cinema */
+#cena-cinema {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    /* Largura da sua imagem */
+    height: 900px;
+    /* Altura da sua imagem - AJUSTE ESTE VALOR */
+
+    /* 2. MUDE A IMAGEM DE FUNDO */
+    background-image: url('imagens/imagem-do-cinema.png');
+
+    background-size: 100% 100%;
+    background-position: center;
+
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. POSICIONE OS NOVOS HOTSPOTS */
+
+/* Posição do Hotspot da Bilheteria */
+#hotspot-bilheteria {
+    top: 70%;
+    /* Ajuste o valor */
+    left: 30%;
+    /* Ajuste o valor */
+}
+
+/* Posição do Hotspot da Fila */
+#hotspot-fila-preferencial {
+    top: 45%;
+    /* Ajuste o valor */
+    left: 70%;
+    /* Ajuste o valor */
+}
+
+/* ==================================================
+  ESTILOS PARA A CENA INTERATIVA (Hospital)
+==================================================
+*/
+
+/* 1. Define a imagem de fundo do hospital */
+#cena-hospital {
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+
+    /* === MUDE AQUI a altura === */
+    height: 900px;
+    /* <-- MUDE PARA A ALTURA DA SUA IMAGEM */
+
+    /* Imagem de fundo corrigida com .png */
+    background-image: url('imagens/hospital.png');
+
+    background-size: 100% 100%;
+    background-position: center;
+
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. POSICIONE OS HOTSPOTS DO HOSPITAL */
+/* (Baseado no seu hospital.html) */
+
+/* Posição do Hotspot da carteirinha */
+#hotspot-recepcao {
+    top: 60%;
+    /* Ajuste o valor (top/bottom) */
+    left: 30%;
+    /* Ajuste o valor (left/right) */
+}
+
+/* Posição do Hotspot da Espera */
+#hotspot-espera {
+    top: 30%;
+    /* Ajuste o valor */
+    left: 70%;
+    /* Ajuste o valor */
+}
+
+/* ==================================================
+  ESTILOS PARA A CENA INTERATIVA (Renda)
+==================================================
+*/
+
+/* 1. Define a imagem de fundo da cena "Renda" */
+#cena-renda {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+
+    /* === MUDE AQUI a altura === */
+    height: 900px;
+    /* <-- MUDE PARA A ALTURA DA SUA IMAGEM */
+
+    /* === MUDE AQUI o nome da imagem === */
+    background-image: url('imagens/imagem-de-renda.png');
+
+    background-size: 100% 100%;
+    background-position: center;
+
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. POSICIONE OS HOTSPOTS DA CENA "Renda" */
+
+/* Posição do Hotspot BPC */
+#hotspot-bpc {
+    top: 70%;
+    /* Ajuste o valor (top/bottom) */
+    left: 60%;
+    /* Ajuste o valor (left/right) */
+}
+
+/* Posição do Hotspot CRAS/INSS */
+#hotspot-cras {
+    top: 20%;
+    /* Ajuste o valor */
+    left: 85%;
+    /* Ajuste o valor */
+}
+
+/* ==================================================
+  ESTILOS PARA A CENA INTERATIVA (Transporte)
+==================================================
+*/
+
+/* 1. Define a imagem de fundo da cena "Transporte" */
+#cena-transporte {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+
+    /* === MUDE AQUI a altura === */
+    height: 900px;
+    /* <-- CORRIGIDO AQUI (removido o 't_') */
+
+    /* === MUDE AQUI o nome da imagem === */
+    background-image: url('imagens/transporte.png');
+
+    background-size: 100% 100%;
+    background-position: center;
+
+    border-radius: 20px;
+    margin: 20px auto;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Posição do Hotspot Ônibus Municipal */
+#hotspot-onibus-municipal {
+    top: 30%;
+    /* Ajuste o valor */
+    left: 80%;
+    /* Ajuste o valor */
+}
+/* 2. POSICIONE OS HOTSPOTS DA CENA "Transporte" */
+
+/* Posição do Hotspot Passe Livre */
+#hotspot-passe-livre {
+    top: 60%;
+    /* Ajuste o valor (top/bottom) */
+    left: 45%;
+    /* Ajuste o valor (left/right) */
+}
+
+/* ==================================================
+  ESTILOS PARA A NOVA CENA (Ajudante)
+==================================================
+*/
+#cena-ajudante {
+    position: relative; 
+    width: 100%;
+    max-width: 1000px; 
+    height: 850px;    /* <-- Ajuste a altura da imagem do ajudante */
+    
+    /* === MUDE AQUI o nome da imagem === */
+    background-image: url('imagens/professora-e-ajudante.jpg'); 
+    
+    background-size: 100% 100%; /* Estilo de preenchimento */
+    background-position: center; 
+    border-radius: 10px;
+    margin: 20px auto; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Posição dos hotspots do ajudante */
+#hotspot-o-que-ele-faz {
+    top: 60%;
+    left: 45%;
+}
+#hotspot-como-pedir {
+    top: 30%;
+    left: 70%;
+}
+
+
+/* ==================================================
+  ESTILOS PARA OS NOVOS BOTÕES DE NAVEGAÇÃO DO AJUDANTE
+==================================================
+*/
+
+/* Botão Próximo (Canto Superior Direito) */
+#botao-proximo {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* <-- Alinha à direita */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    z-index: 5;
+    transition: background-color 0.2s;
+}
+#botao-proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Botão "Menu Principal" (Canto Superior Direito) */
+#botao-menu-principal {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* <-- Alinha à direita */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    z-index: 5;
+    transition: background-color 0.2s;
+}
+#botao-menu-principal:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

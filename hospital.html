@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cena Interativa - Hospital</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-body">
+
+ <div class="cena-interativa" id="cena-hospital">
+
+        <div class="hotspot" id="hotspot-recepcao">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Carteirinha(CIPTEA)</strong>
+                <p>Esta é a sua carteira de identificação (CIPTEA). Se você ou seu responsável mostrar ela na recepção, as pessoas saberão que você tem prioridade!</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/ciptea.MP3" preload="auto"></audio>
+        </div>
+
+        <div class="hotspot" id="hotspot-espera">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Seu Direito: Atendimento Prioritário</strong>
+                <p>Você não precisa ficar muito tempo na fila de espera. Com a sua carteirinha, você tem o direito de ser atendido mais rápido no hospital.</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/hospital-prioridade.MP3" preload="auto"></audio>
+        </div>
+        
+        
+        <a href="index.html" class="botao-nav" id="botao-voltar">
+            ← Voltar ao Menu 
+        </a>
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

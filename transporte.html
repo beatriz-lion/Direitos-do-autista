@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cena Interativa - Transporte Público</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-body"> 
+    <div class="cena-interativa" id="cena-transporte">
+
+        <div class="hotspot" id="hotspot-passe-livre">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Direito: Transporte na sua Cidade</strong>
+                <p>Na sua cidade, você também tem direito à gratuidade no ônibus. Verifique na prefeitura ou no CRAS qual é a carteirinha necessária para isso!</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/passe-municipal.mp3" preload="auto"></audio>
+        </div>
+
+        <div class="hotspot" id="hotspot-onibus-municipal">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Direito: Passe Livre Interestadual</strong>
+                <p>Você tem o direito de viajar de graça em ônibus, barcos ou trens entre estados diferentes! É preciso pedir a "Carteira de Passe Livre" (CIPTEA) no CRAS.</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/passe-livre-interestadual.MP3" preload="auto"></audio>
+        </div>
+
+        <a href="index.html" class="botao-nav" id="botao-voltar">
+            ← Voltar ao Menu
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

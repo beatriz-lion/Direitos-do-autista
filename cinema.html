@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cena Interativa - Cinema</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-body">
+
+    <div class="cena-interativa" id="cena-cinema">
+
+        <div class="hotspot" id="hotspot-bilheteria">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Seu Direito: Pagar Meia-Entrada</strong>
+                <p>Você sabia? Ao mostrar sua carteirinha ou laudo, você tem o direito de pagar metade do valor do ingresso no cinema. Isso vale para você e também para um acompanhante!</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/cinema-meia-entrada.mp3" preload="auto"></audio>
+        </div>
+
+        <div class="hotspot" id="hotspot-fila-preferencial">
+            <div class="hotspot-icone"></div>
+            <div class="info-box">
+                <strong>Seu Direito: Fila Preferencial</strong>
+                <p>Viu uma fila grande? Você não precisa esperar! Procure pela placa de atendimento prioritário. É um direito seu e do seu acompanhante.</p>
+            </div>
+            <audio class="audio-transcricao" src="audio/cinema-fila.mp3" preload="auto"></audio>
+        </div>
+
+        
+        <a href="index.html" class="botao-nav" id="botao-voltar">
+            ← Voltar ao Menu
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
